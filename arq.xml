@@ -1,0 +1,27 @@
+<Grafo>
+  <vertices>
+    <grafo.Vertice>
+      <nome>a</nome>
+    </grafo.Vertice>
+    <grafo.Vertice>
+      <nome>b</nome>
+    </grafo.Vertice>
+    <grafo.Vertice>
+      <nome>c</nome>
+    </grafo.Vertice>
+  </vertices>
+  <arestas>
+    <grafo.Aresta>
+      <origem>a</origem>
+      <destino>a</destino>
+    </grafo.Aresta>
+    <grafo.Aresta>
+      <origem>a</origem>
+      <destino>b</destino>
+    </grafo.Aresta>
+    <grafo.Aresta>
+      <origem>b</origem>
+      <destino>c</destino>
+    </grafo.Aresta>
+  </arestas>
+</Grafo>

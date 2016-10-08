@@ -23,20 +23,54 @@ public class Grafo {
      */
     List<Vertice> vertices = new ArrayList<Vertice>();
     List<Aresta> arestas = new ArrayList<Aresta>();
+    private String tipo;
+
     
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
     public void addVertice(String nome){
+        if(getTipo() != null){
         Vertice v = new Vertice(nome);
         vertices.add(v);
+        }
     }
     public void addAresta(String origem, String destino){
         Aresta a = new Aresta(origem, destino);
-        arestas.add(a);
-    }
-    public List<Aresta> getAresta(){
-        for(Aresta a: arestas){
-            System.out.println(a.origem +","+a.destino);
+        if(getTipo() == "nOrientado")
+        {
+            for(Vertice v: vertices)
+            {
+                if(v.nome == origem)
+                {
+                    for(Vertice v1: vertices)
+                    {
+                        if(v1.nome == destino)
+                        {
+                            arestas.add(a);  
+                        }
+                    }  
+                }
+            }
         }
-        return arestas;
+    }
+    public String getAresta(){
+        String r ="";
+        for(Aresta a: arestas){
+            r+=a.origem+""+a.destino+",";
+        }
+        return r;
+    }
+    public String getVertice(){
+        String r ="";
+        for(Vertice v: vertices){
+            r+= v.nome+",";
+        }
+        return r;
     }
     public void salvar(Grafo nome){
         XStream xStream = new XStream();
@@ -51,18 +85,20 @@ public class Grafo {
         
         }
     }
-    public void abrir(Grafo nome){
+    public String abrir(Grafo nome){
+        
         XStream xStream = new XStream();
         xStream.alias("Grafo",Grafo.class );
         
         File xmlFileLer = new File("arq.xml");
-        Grafo  gf = (Grafo) xStream.fromXML(xmlFileLer);
-        String xml2 = xStream.toXML(gf);
-        System.out.println(xml2);
+        Grafo  g = (Grafo) xStream.fromXML(xmlFileLer);
+        String xml2 = xStream.toXML(g);
+        return xml2;
     }
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         // TODO code application logic here
         Grafo g = new Grafo();
+        g.setTipo("orientado");
         g.addVertice("a");
         g.addVertice("b");
         g.addVertice("c");
@@ -71,10 +107,10 @@ public class Grafo {
         g.addAresta("a","b");
         g.addAresta("b","c");
         
-        g.salvar(g);
+        g.getAresta();
+       g.salvar(g);
         System.out.println("**************************************");
         g.abrir(g);           
 
-    }
-    
+    }*/    
 }

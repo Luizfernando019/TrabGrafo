@@ -10,10 +10,10 @@ package grafo;
  * @author Anah
  */
 public class Aresta {
-    String origem;
-    String destino;
+    int origem;
+    int destino;
     
-    public Aresta(String origem, String destino) {
+    public Aresta(int origem, int destino) {
         this.origem = origem;
         this.destino = destino;
     }

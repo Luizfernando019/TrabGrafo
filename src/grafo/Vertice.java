@@ -10,9 +10,9 @@ package grafo;
  * @author Anah
  */
 public class Vertice {
-    String nome;
+    int nome;
     
-    public Vertice(String nome) {
+    public Vertice(int nome) {
         this.nome = nome;
     }
 }

@@ -19,17 +19,8 @@
       <destino>2</destino>
     </grafo.Aresta>
     <grafo.Aresta>
-      <origem>2</origem>
-      <destino>1</destino>
-    </grafo.Aresta>
-    <grafo.Aresta>
       <origem>1</origem>
-      <destino>1</destino>
-    </grafo.Aresta>
-    <grafo.Aresta>
-      <origem>1</origem>
-      <destino>1</destino>
+      <destino>3</destino>
     </grafo.Aresta>
   </arestas>
-  <tipo>nOrientado</tipo>
 </Grafo>

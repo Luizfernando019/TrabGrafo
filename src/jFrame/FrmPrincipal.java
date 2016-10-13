@@ -37,10 +37,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
         buttonGroup4 = new javax.swing.ButtonGroup();
-        jPanel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtDisplay = new javax.swing.JTextArea();
-        jLabel1 = new javax.swing.JLabel();
         chkBoxNOrientado = new javax.swing.JCheckBox();
         chkBoxOrientado = new javax.swing.JCheckBox();
         btnAbrir = new javax.swing.JButton();
@@ -48,48 +44,17 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txtFieldVertice = new javax.swing.JTextField();
         btnAddVertice = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        txtFieldArestaOrigem = new javax.swing.JTextField();
-        btnAddAresta = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
         txtFieldArestaDestino = new javax.swing.JTextField();
+        btnAddAresta = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
+        txtFieldArestaOrigem = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
         btnSalvar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTxtDisplay = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
-        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        txtDisplay.setEditable(false);
-        txtDisplay.setBackground(new java.awt.Color(0, 0, 0));
-        txtDisplay.setColumns(20);
-        txtDisplay.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
-        txtDisplay.setForeground(new java.awt.Color(0, 255, 102));
-        txtDisplay.setRows(5);
-        jScrollPane1.setViewportView(txtDisplay);
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel1.setText("Display");
 
         chkBoxNOrientado.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         chkBoxNOrientado.setText("Não Orientado");
@@ -108,6 +73,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         });
 
         btnAbrir.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        btnAbrir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/ab.png"))); // NOI18N
         btnAbrir.setText("Abrir");
         btnAbrir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,8 +100,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setText("-");
-
         jLabel3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel3.setText("Aresta Origem");
 
@@ -146,11 +110,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButton7.setText("-");
-
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel4.setText("Aresta Destino");
-
+        btnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/fx.png"))); // NOI18N
         btnSair.setText("Sair");
         btnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,35 +118,35 @@ public class FrmPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel4.setText("Aresta Destino");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(txtFieldVertice, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnAddVertice)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton5))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(36, 36, 36)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(txtFieldVertice, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
+                            .addComponent(txtFieldArestaOrigem, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(txtFieldArestaDestino, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnAddAresta)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton7)
-                                .addGap(46, 46, 46)
-                                .addComponent(btnSair))))
-                    .addComponent(txtFieldArestaOrigem, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jLabel4)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(txtFieldArestaDestino))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnAddAresta)
+                    .addComponent(btnAddVertice, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
+                .addComponent(btnSair)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -196,26 +156,23 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtFieldVertice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAddVertice)
-                    .addComponent(jButton5))
+                    .addComponent(btnAddVertice))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtFieldArestaOrigem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtFieldArestaDestino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnAddAresta)
-                            .addComponent(jButton7)
-                            .addComponent(btnSair))))
-                .addContainerGap())
+                    .addComponent(btnSair)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtFieldArestaOrigem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtFieldArestaDestino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnAddAresta)))
+                .addGap(14, 14, 14))
         );
 
         btnSalvar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        btnSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/sv.png"))); // NOI18N
         btnSalvar.setText("Salvar");
         btnSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,49 +180,57 @@ public class FrmPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jTxtDisplay.setEditable(false);
+        jTxtDisplay.setBackground(new java.awt.Color(0, 0, 0));
+        jTxtDisplay.setColumns(20);
+        jTxtDisplay.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jTxtDisplay.setForeground(new java.awt.Color(51, 255, 102));
+        jTxtDisplay.setRows(5);
+        jTxtDisplay.setCaretColor(new java.awt.Color(51, 255, 102));
+        jTxtDisplay.setSelectedTextColor(new java.awt.Color(0, 255, 102));
+        jScrollPane1.setViewportView(jTxtDisplay);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel1))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(chkBoxOrientado)
-                        .addGap(8, 8, 8)
-                        .addComponent(chkBoxNOrientado)
-                        .addGap(73, 73, 73)
-                        .addComponent(btnAbrir)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnSalvar)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addGap(22, 22, 22)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(41, 41, 41)
+                                .addComponent(chkBoxOrientado)
+                                .addGap(8, 8, 8)
+                                .addComponent(chkBoxNOrientado)
+                                .addGap(48, 48, 48)
+                                .addComponent(btnAbrir)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnSalvar)))
+                        .addGap(0, 8, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(5, 5, 5)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAbrir)
-                    .addComponent(chkBoxOrientado)
-                    .addComponent(chkBoxNOrientado)
-                    .addComponent(btnSalvar))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnAbrir)
+                        .addComponent(chkBoxOrientado)
+                        .addComponent(chkBoxNOrientado)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -282,7 +247,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
     private void btnAbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirActionPerformed
        g.abrir(g);
-       txtDisplay.setText(g.abrir(g));
+      JOptionPane.showMessageDialog(null,"Carregado com Sucesso!!");
     }//GEN-LAST:event_btnAbrirActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
@@ -300,19 +265,19 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_txtFieldVerticeActionPerformed
 
     private void btnAddVerticeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddVerticeActionPerformed
-       g.addVertice(txtFieldVertice.getText());
+       g.addVertice( Integer.parseInt(txtFieldVertice.getText()));
        txtFieldVertice.setText("");
-       txtDisplay.setText("Vertice: ("+g.getVertice()+")");
+      jTxtDisplay.setText("Vertice: ("+g.getVertice()+")");
        if(g.getTipo() == null){
-           txtDisplay.setText("ESCOLHA UM TIPO:\nOrientado ou Não Orientado");
+      //     txtDisplay.setText("ESCOLHA UM TIPO:\nOrientado ou Não Orientado");
        }
     }//GEN-LAST:event_btnAddVerticeActionPerformed
 
     private void btnAddArestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddArestaActionPerformed
-       g.addAresta(txtFieldArestaOrigem.getText(),txtFieldArestaDestino.getText());
+       g.addAresta(Integer.parseInt(txtFieldArestaOrigem.getText()),Integer.parseInt(txtFieldArestaDestino.getText()));
        txtFieldArestaOrigem.setText("");
        txtFieldArestaDestino.setText("");
-       txtDisplay.setText("Aresta: ("+g.getAresta()+")");
+       jTxtDisplay.setText("Aresta: ("+g.getAresta()+")");
 
     }//GEN-LAST:event_btnAddArestaActionPerformed
 
@@ -363,16 +328,12 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.JCheckBox chkBoxNOrientado;
     private javax.swing.JCheckBox chkBoxOrientado;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea txtDisplay;
+    private javax.swing.JTextArea jTxtDisplay;
     private javax.swing.JTextField txtFieldArestaDestino;
     private javax.swing.JTextField txtFieldArestaOrigem;
     private javax.swing.JTextField txtFieldVertice;

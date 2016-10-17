@@ -6,6 +6,8 @@
 package grafo;
 
 import com.thoughtworks.xstream.XStream;
+import grafo.Aresta;
+import grafo.Vertice;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -33,9 +35,8 @@ public class Grafo {
         this.tipo = tipo;
     }
     public void addVertice(int qt){
-       int i = 0;
        int guant = qt;
-       for(i =0; i<= guant;i++){
+       for(int i = 1; i<= guant;i++){
         Vertice v = new Vertice(i);
         vertices.add(v);
        }
@@ -45,12 +46,8 @@ public class Grafo {
         int i=0;
         Aresta a = new Aresta(origem, destino);
         if(getTipo().equals("orientado")){
-            for(Vertice v1: vertices){
-                if(v1.nome != destino && v1.nome == origem){
-                    arestas.add(a);
-                }
-                       
-            }   
+            arestas.add(a);      
+            
         }else if(getTipo().equals("nOrientado")){
             Aresta a1 = new Aresta (destino,origem);
             arestas.add(a);
@@ -69,6 +66,7 @@ public class Grafo {
         String r ="";
         for(Vertice v: vertices){
             r+= v.nome+",";
+            //System.out.println(v.nome);
         }
         return r;
     }
@@ -94,4 +92,5 @@ public class Grafo {
         String xml2 = xStream.toXML(g);
         return xml2;
     }    
+       
 }

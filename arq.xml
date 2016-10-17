@@ -1,35 +1,4 @@
 <Grafo>
-  <vertices>
-    <grafo.Vertice>
-      <nome>0</nome>
-    </grafo.Vertice>
-    <grafo.Vertice>
-      <nome>1</nome>
-    </grafo.Vertice>
-    <grafo.Vertice>
-      <nome>2</nome>
-    </grafo.Vertice>
-    <grafo.Vertice>
-      <nome>3</nome>
-    </grafo.Vertice>
-  </vertices>
-  <arestas>
-    <grafo.Aresta>
-      <origem>1</origem>
-      <destino>2</destino>
-    </grafo.Aresta>
-    <grafo.Aresta>
-      <origem>2</origem>
-      <destino>1</destino>
-    </grafo.Aresta>
-    <grafo.Aresta>
-      <origem>1</origem>
-      <destino>1</destino>
-    </grafo.Aresta>
-    <grafo.Aresta>
-      <origem>1</origem>
-      <destino>1</destino>
-    </grafo.Aresta>
-  </arestas>
-  <tipo>nOrientado</tipo>
+  <vertices/>
+  <arestas/>
 </Grafo>

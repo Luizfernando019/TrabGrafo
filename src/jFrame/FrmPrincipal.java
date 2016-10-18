@@ -288,16 +288,14 @@ public class FrmPrincipal extends javax.swing.JFrame {
        g.addVertice( Integer.parseInt(txtFieldVertice.getText()));
        txtFieldVertice.setText("");
       jTxtDisplay.setText("Vertice: ("+g.getVertice()+")");
-       if(g.getTipo() == null){
-       jTxtDisplay.setText("ESCOLHA UM TIPO:\nOrientado ou Não Orientado");
-       }
+
     }//GEN-LAST:event_btnAddVerticeActionPerformed
 
     private void btnAddArestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddArestaActionPerformed
        g.addAresta(Integer.parseInt(txtFieldArestaOrigem.getText()),Integer.parseInt(txtFieldArestaDestino.getText()));
        txtFieldArestaOrigem.setText("");
        txtFieldArestaDestino.setText("");
-       jTxtDisplay.setText("Aresta: ("+g.getAresta()+")");
+       jTxtDisplay.setText("Aresta: "+g.getAresta());
     }//GEN-LAST:event_btnAddArestaActionPerformed
 
     private void txtFieldArestaDestinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldArestaDestinoActionPerformed

@@ -43,21 +43,13 @@ public class Grafo {
        
     }
     public void addAresta(int origem, int destino){
-        int i=0;
         Aresta a = new Aresta(origem, destino);
-        if(getTipo().equals("orientado")){
-            arestas.add(a);      
-            
-        }else if(getTipo().equals("nOrientado")){
-            Aresta a1 = new Aresta (destino,origem);
             arestas.add(a);
-            arestas.add(a1);
-        }
     }
     public String getAresta(){
         String r ="";
         for(Aresta a: arestas){
-            r+=a.origem+","+a.destino+",";
+            r+="("+a.origem+","+a.destino+")";
             //System.out.println(a.origem+","+a.destino);
         }
         return r;
